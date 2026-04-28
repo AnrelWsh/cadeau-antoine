@@ -107,8 +107,8 @@
 
 
 <div class="msg-final" id="msgFinal">
-  <strong>Ok ok, on rigole !</strong> 😄<br>
-  L'argent arrive. Profites-en pour acheter des couches,<br>ou du café, t'en as sûrement besoin. ☕
+  <strong>Ok ok, on arrête !</strong> 😄<br>
+  L'argent arrive. Profites-en pour acheter des couches, ou du café, t'en as sûrement bien besoin.
 </div>
 
 <script>
@@ -134,13 +134,14 @@ var area = document.getElementById('btnArea');
 var msgFinal = document.getElementById('msgFinal');
 var lastSide = null;
 
-var labels = ['Clique ici', '😅 Non vraiment, clique ici !', '🏃 Attrape-moi si tu peux...'];
+var labels = ['Clique ici', 'Non plutôt ici !', '🏃 Attrape-moi si tu peux...'];
 
 btn.addEventListener('click', function() {
   clicks++;
   if (clicks >= 3) {
     btn.style.display = 'none';
     msgFinal.style.display = 'block';
+   area.style.display = "none"
     return;
   }
   btn.textContent = labels[clicks];
